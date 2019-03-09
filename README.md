@@ -2,7 +2,7 @@
 
 To start you off, you must download PROS and git.
 
-DOWNLOAD PROS: https://github.com/purduesigbots/pros-cli3/releases (pros-windows-3.1.3.0-64bit.exe)
+DOWNLOAD PROS: https://github.com/purduesigbots/pros-cli3/releases (pros-windows-3.1.4.0-64bit.exe)
 
 DOWNLOAD GIT: https://git-scm.com/downloads
 
