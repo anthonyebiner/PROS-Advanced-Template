@@ -1,7 +1,4 @@
 # PROS TEMPLATE
-If you received a link to this repository, you are trusted to not disclose its contents to anyone else. If you do, certain people in the program may feel that the pre-written functions contained are not in the spirit of VEX, and prevent you from using it. So for the good of the program, keep this repository a secret. Delete this section of the readme when you download it. 
-
------------------------------------------------------------------------------------------------------
 
 To start you off, you must download PROS and git.
 
