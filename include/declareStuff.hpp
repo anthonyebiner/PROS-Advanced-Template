@@ -6,35 +6,20 @@ extern Motor FrontRightM;
 extern Motor FrontLeftM;
 extern Motor BackRightM;
 extern Motor BackLeftM;
-extern Motor IntakeM;
-extern Motor LiftM;
-extern Motor Flywheel1M;
-extern Motor Flywheel2M;
+extern Motor LiftM1;
+extern Motor LiftM2;
 
 extern Controller MasterC;
 
-extern ControllerButton intakeInButton;
-extern ControllerButton intakeOutButton;
-extern ControllerButton runFlywheelFastButton;
-extern ControllerButton runFlywheelMediumButton;
-extern ControllerButton runFlywheelSlowButton;
 extern ControllerButton liftUpButton;
 extern ControllerButton liftDownButton;
 
 extern AsyncPosIntegratedController lift;
 extern ChassisControllerIntegrated drive;
 
-extern MotorGroup flywheel;
+extern MotorGroup LiftG;
 
 extern AsyncMotionProfileController driveController;
-
-extern bool control;
-extern bool autonRunning;
-
-extern int fastVelocity;
-extern int mediumVelocity;
-extern int slowVelocity;
-extern int defaultVelocity;
 
 extern const int NUM_HEIGHTS;
 extern const int height1;

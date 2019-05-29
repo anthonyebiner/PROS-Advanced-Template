@@ -10,15 +10,13 @@ Motor FrontRightM(1, true, AbstractMotor::gearset::green, AbstractMotor::encoder
 Motor FrontLeftM(2,  false, AbstractMotor::gearset::green, AbstractMotor::encoderUnits::degrees);
 Motor BackRightM(3,  true, AbstractMotor::gearset::green, AbstractMotor::encoderUnits::degrees);
 Motor BackLeftM(4,  false, AbstractMotor::gearset::green, AbstractMotor::encoderUnits::degrees);
-Motor IntakeM(5,  true, AbstractMotor::gearset::blue, AbstractMotor::encoderUnits::degrees);
-Motor LiftM(6,  false, AbstractMotor::gearset::red, AbstractMotor::encoderUnits::degrees);
-Motor Flywheel1M(9,  false, AbstractMotor::gearset::blue, AbstractMotor::encoderUnits::degrees);
-Motor Flywheel2M(10,  true, AbstractMotor::gearset::blue, AbstractMotor::encoderUnits::degrees);
+Motor LiftM1(5,  true, AbstractMotor::gearset::red, AbstractMotor::encoderUnits::degrees);
+Motor LiftM2(6,  false, AbstractMotor::gearset::red, AbstractMotor::encoderUnits::degrees);
 
 Controller MasterC; //The name of your controller
 
-ControllerButton intakeInButton(ControllerDigital::L1); //Define buttons here
-ControllerButton intakeOutButton(ControllerDigital::L2);
+ControllerButton liftUpButton(ControllerDigital::R1); //define buttons here
+ControllerButton liftDownButton(ControllerDigital::R2);
 
 ChassisControllerIntegrated drive = ChassisControllerFactory::create( //create a chassis that contains your drive motors
   {FrontLeftM, BackLeftM}, {FrontRightM, BackRightM}, //{Left motors}, {Right motors}
@@ -26,9 +24,9 @@ ChassisControllerIntegrated drive = ChassisControllerFactory::create( //create a
   {4.15_in, 14.5_in} //{wheel diameter, distance between wheels}
 );
 
-AsyncPosIntegratedController lift = AsyncControllerFactory::posIntegrated(LiftM); //creates a controller for the lift
+MotorGroup LiftG({LiftM1,LiftM2}); //groups the two flywheel motors together so we can control them at the same time
 
-MotorGroup flywheel({Flywheel1M,Flywheel2M}); //groups the two flywheel motors together so we can control them at the same time
+AsyncPosIntegratedController lift = AsyncControllerFactory::posIntegrated(LiftG); //creates a controller for the lift
 
 AsyncMotionProfileController driveController = AsyncControllerFactory::motionProfile(0.75, 1.0, 5.0, drive); //creates a 2D motion profile controller
 
