@@ -3,7 +3,7 @@
 /*
 This is the initialization file for your program. You will want to put anything that you want to be done before the
 driver control and autonomous peroids. This is also a good place to define all of you motors, sensors, controllers,
-and variables
+and variables.
 */
 
 Motor FrontRightM(1, true, AbstractMotor::gearset::green, AbstractMotor::encoderUnits::degrees); //(port, reversed, gearset, encoderUnits)
