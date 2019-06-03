@@ -39,3 +39,8 @@ brain. If you changed any of the header files in the include folder, you must cl
 click Build, then click All. If not, then you can just click the graphical Build-Pros-Project button. You have
 to do this every time before downloading the code. Once it successfully completes, you can download the code
 by pressing the "Upload PROS Project" button. Then you are ready to go!
+
+--------------------------------------------------------------------------------------------------------
+
+Here's a link to document which lists all of the stuff you need to know to start programming. This is very helpful.
+https://docs.google.com/document/d/1O8CkgUyPWN54VRublCWZ8JdiwJlctUDuPkCKcbtpmrA/edit?usp=sharing
